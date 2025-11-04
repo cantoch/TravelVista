@@ -7,6 +7,8 @@
 
 import UIKit
 import MapKit
+import SwiftUI
+
 
 class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var countryNameLabel: UILabel!
@@ -19,6 +21,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var rateView: UIView!
     
+    
     var country: Country?
     
     override func viewDidLoad() {
@@ -28,6 +31,21 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
         if let country = self.country {
             self.setUpData(country: country)
+            
+            let viewModel = TitleViewModel(country: country)
+            let hostingController = UIHostingController(rootView: TitleViewSwiftUI(viewModel: viewModel))
+            self.addChild(hostingController)
+            self.view.addSubview(hostingController.view)
+            hostingController.didMove(toParent: self)
+            
+            hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+            hostingController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+            hostingController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+            hostingController.view.topAnchor.constraint(equalTo: self.imageView.bottomAnchor).isActive = true
+            hostingController.view.bottomAnchor.constraint(equalTo: self.descriptionTextView.topAnchor).isActive = true
+            hostingController.view.heightAnchor.constraint(equalToConstant: 65).isActive = true
+          
+            self.titleView.isHidden = true
         }
     }
     
@@ -49,7 +67,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.embedMapView.layer.cornerRadius = self.embedMapView.frame.size.width / 2
         self.mapButton.layer.cornerRadius = self.mapButton.frame.size.width / 2
         
-        self.mapView.layer.borderColor = UIColor(named: "CustomSand")?.cgColor
+         self.mapView.layer.borderColor = UIColor(named: "CustomSand")?.cgColor
         self.mapView.layer.borderWidth = 2
     }
     
@@ -85,3 +103,4 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
+

@@ -18,6 +18,8 @@
 		42B90C1A2B2A055B00779364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C182B2A055B00779364 /* Main.storyboard */; };
 		42B90C1C2B2A056000779364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1B2B2A056000779364 /* Assets.xcassets */; };
 		42B90C1F2B2A056000779364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */; };
+		9A57CFB12EB63E59004B6085 /* TitleViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A57CFB02EB63E59004B6085 /* TitleViewSwiftUI.swift */; };
+		9A57CFB42EB91FFC004B6085 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A57CFB32EB91FFC004B6085 /* TitleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		42B90C1B2B2A056000779364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42B90C1E2B2A056000779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42B90C202B2A056000779364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A57CFB02EB63E59004B6085 /* TitleViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewSwiftUI.swift; sourceTree = "<group>"; };
+		9A57CFB32EB91FFC004B6085 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 		424C31BE2B30956400279238 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A57CFAF2EB63E36004B6085 /* SwiftUIView */,
 				424C31BC2B30955E00279238 /* DetailViewController.swift */,
 				42B90C162B2A055B00779364 /* ListViewController.swift */,
 				424C31BA2B30919400279238 /* CustomCell.swift */,
@@ -87,6 +92,7 @@
 		42B90C112B2A055B00779364 /* TravelVista */ = {
 			isa = PBXGroup;
 			children = (
+				9A57CFB22EB91FDF004B6085 /* ViewModel */,
 				424C31C92B30ABE600279238 /* Model */,
 				424C31BE2B30956400279238 /* Views */,
 				42B90C122B2A055B00779364 /* AppDelegate.swift */,
@@ -96,6 +102,22 @@
 				42B90C202B2A056000779364 /* Info.plist */,
 			);
 			path = TravelVista;
+			sourceTree = "<group>";
+		};
+		9A57CFAF2EB63E36004B6085 /* SwiftUIView */ = {
+			isa = PBXGroup;
+			children = (
+				9A57CFB02EB63E59004B6085 /* TitleViewSwiftUI.swift */,
+			);
+			path = SwiftUIView;
+			sourceTree = "<group>";
+		};
+		9A57CFB22EB91FDF004B6085 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A57CFB32EB91FFC004B6085 /* TitleViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				424C31C42B30A72300279238 /* Model.swift in Sources */,
+				9A57CFB12EB63E59004B6085 /* TitleViewSwiftUI.swift in Sources */,
 				424C31C82B30A78B00279238 /* Service.swift in Sources */,
 				42B90C172B2A055B00779364 /* ListViewController.swift in Sources */,
 				424C31C02B30A39B00279238 /* MapViewController.swift in Sources */,
 				42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */,
 				424C31BD2B30955E00279238 /* DetailViewController.swift in Sources */,
 				424C31BB2B30919400279238 /* CustomCell.swift in Sources */,
+				9A57CFB42EB91FFC004B6085 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = HZAZV43ASV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelVista/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -341,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.TravelVista;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cantoch.TravelVista;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -359,7 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = HZAZV43ASV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelVista/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -372,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.TravelVista;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cantoch.TravelVista;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
