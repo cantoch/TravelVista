@@ -11,22 +11,22 @@ import Foundation
 
 
 struct TitleViewSwiftUI: View {
-    @ObservedObject var viewModel: TitleViewModel
+    @ObservedObject var vm: TitleViewModel
 
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(viewModel.name)
+                Text(vm.name)
                     .font(.system(size: 22, weight: .medium))
                     .foregroundColor(.customBlue)
                 
-                Text(viewModel.capital)
+                Text(vm.capital)
                     .font(.system(size: 17))
                     .foregroundColor(.gray)
             }
             Spacer()
             HStack(spacing: 4) {
-                ForEach(0..<viewModel.rate, id: \.self) { _ in
+                ForEach(0..<vm.rate, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .resizable()
                         .frame(width: 18, height: 18)
@@ -49,7 +49,7 @@ struct TitleViewSwiftUI: View {
         coordinates: .init(latitude: 48.8566, longitude: 2.3522)
     )
     let vm = TitleViewModel(country: sampleCountry)
-    TitleViewSwiftUI(viewModel: vm)
+    TitleViewSwiftUI(vm: vm)
 }
 
 

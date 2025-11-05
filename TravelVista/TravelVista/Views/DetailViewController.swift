@@ -33,7 +33,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
             self.setUpData(country: country)
             
             let viewModel = TitleViewModel(country: country)
-            let hostingController = UIHostingController(rootView: TitleViewSwiftUI(viewModel: viewModel))
+            let hostingController = UIHostingController(rootView: TitleViewSwiftUI(vm: viewModel))
             self.addChild(hostingController)
             self.view.addSubview(hostingController.view)
             hostingController.didMove(toParent: self)
