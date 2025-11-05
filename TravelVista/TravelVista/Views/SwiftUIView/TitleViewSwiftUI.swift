@@ -8,8 +8,6 @@
 import SwiftUI
 import Foundation
 
-
-
 struct TitleViewSwiftUI: View {
     @ObservedObject var vm: TitleViewModel
 
@@ -39,7 +37,6 @@ struct TitleViewSwiftUI: View {
 }
 
 #Preview("TitleView") {
-    // Provide a fully-initialized sample Country matching the project's initializer
     let sampleCountry = Country(
         name: "France",
         capital: "Paris",

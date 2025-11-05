@@ -16,7 +16,7 @@ struct ListView: View {
                 ForEach(vm.regions) { region in
                     Section(header: Text(region.name)) {
                         ForEach (region.countries, id: \.name) { country in
-                            NavigationLink(destination: RowView(vm: TitleViewModel(country: country))) {
+                            NavigationLink(destination: DetailView(country: country)) {
                                 RowView(vm: TitleViewModel(country: country))
                             }
                             .navigationLinkIndicatorVisibility(.hidden)

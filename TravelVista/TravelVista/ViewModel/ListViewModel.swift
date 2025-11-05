@@ -8,7 +8,6 @@
 import Foundation
 
 final class ListViewModel: ObservableObject {
-    
     @Published var regions: [Region] = []
     
     let service = Service()
